@@ -49,7 +49,7 @@ class SpotifyCallBackView(APIView):
                 'id': user_info['id'],
                 'spotify_display_name': user_info['display_name'],
                 'access_token': token_info['access_token'],
-                'session_id': request.session[user_info['id']]
+                'session_id': user_info['id']
             },
             status=status.HTTP_201_CREATED)
 
