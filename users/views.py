@@ -36,11 +36,11 @@ class SpotifyCallBackView(APIView):
         user_info = sp.current_user()
         
         #Save user session to redis session (This is optional though)
-        request.session[user_info['id']] = {
+        '''request.session[user_info['id']] = {
             user_info['id'],
             user_info['display_name'],
             token_info['access_token'],
-        }
+        }'''
         
         #user_data = request.session.get(user_info['id']) #This was a debug line to debug something
 
